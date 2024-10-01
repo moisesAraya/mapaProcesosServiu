@@ -1,0 +1,33 @@
+/* Importa las fuentes personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+/* Importa las directivas de Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados adicionales */
+@layer base {
+  body {
+    @apply bg-gray-100 text-gray-800;
+  }
+}
+
+@layer components {
+  /* Clases personalizadas para botones */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-semibold transition-colors duration-300;
+  }
+  .btn-primary {
+    @apply bg-serviu-blue text-white hover:bg-serviu-blue-dark;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  .drop-shadow-md {
+    filter: drop-shadow(0 4px 3px rgba(0, 0, 0, 0.1));
+  }
+}
